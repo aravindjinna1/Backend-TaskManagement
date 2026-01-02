@@ -120,7 +120,7 @@ Create a `.env` file in the backend root with the following variables:
 
 ```env
 PORT=5000
-MONGO_URI=mongodb+srv://aravindjinna1_db_user:aravindjinna123@cluster0.louj41q.mongodb.net/
+MONGO_URI=mongodb+srv://aravindjinna1<passwordxxxxxx>.mongodb.net/
 JWT_SECRET=my_jwt_secret
 ```
 

@@ -10,5 +10,6 @@ role: {
   default: "user"
 }
 });
+//   default: "user"
 
 module.exports = mongoose.model("User", userSchema);

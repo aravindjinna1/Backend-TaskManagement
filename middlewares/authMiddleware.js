@@ -17,6 +17,7 @@ module.exports = (req, res, next) => {
     req.user = decoded; 
     console.log("authentication passed")
     next();
+    // next middleware route
   } catch (err) {
     return res.status(401).json({ message: "Invalid token" });
   }

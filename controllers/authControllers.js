@@ -9,6 +9,7 @@ exports.register = async (req, res) => {
   const { name, email, password, role } = req.body;
   const hash = await bcrypt.hash(password, 10);
   console.log(name, email, password);
+  // console.log(name, email, password);
   
   await User.create({ name, email, password: hash,  role: role === "admin" ? "admin" : "user"   });
 

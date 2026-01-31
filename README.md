@@ -6,7 +6,8 @@
 The Postman collection for this project is available here:  
 `/postman/TaskManagement.postman_collection.json` 
 
-
+<!-- connectDB();
+ -->
 You can import it in Postman to test all APIs:
 - Register & Login
 - Protected routes

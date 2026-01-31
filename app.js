@@ -3,14 +3,20 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors({
-    origin:[
+app.use(
+  cors({
+    origin: [
       "http://localhost:5173",
-       "https://task-management-rho-green.vercel.app/"
-    ]
-}
+      "https://task-management-rho-green.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true
+  })
+);
 
-));
+// 👇 IMPORTANT: handle preflight
+app.options("*", cors());
+
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/authRoutes"));

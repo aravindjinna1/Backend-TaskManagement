@@ -17,13 +17,21 @@ const app = express();
 // app.options("/*", cors());
 
 
+// app.use(cors({
+//   origin: true,
+//   credentials: true
+// }));
+
 app.use(cors({
   origin: true,
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 
 app.use(express.json());
+
 
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
